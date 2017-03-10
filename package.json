@@ -1,0 +1,33 @@
+{
+  "name": "pinterest-clone",
+  "version": "0.0.1",
+  "description": "similar to pinterest",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Mongoose",
+    "full",
+    "stack",
+    "Express",
+    "MongoDB",
+    "Node.js",
+    "javascript",
+    "clemetinejs"
+  ],
+  "author": "elisecode247",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.2",
+    "express-session": "^1.15.1",
+    "mongoose": "^4.8.6",
+    "nodemon": "^1.11.0",
+    "passport": "^0.3.2",
+    "passport-twitter": "^1.0.4",
+    "pug": "^2.0.0-beta11"
+  }
+}
