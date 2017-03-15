@@ -22,6 +22,9 @@ function PictureHandler() {
         if (/\S/.test(description) === false){
             description = `pic posted by @${user}`;
         }
+        if (!url){
+            url = '../public/images/brokenimage.png';
+        }
         var newPicture = new Picture({
             'url': url,
             'description': description,

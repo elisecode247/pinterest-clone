@@ -9,7 +9,8 @@ var createPic = function (event) {
     $('.pic-form__input').val('');
     picForm.toggleClass('form--hidden');
     var newPic = createPicElement(data);
-    $('.grid').prepend(newPic).masonry('prepended', newPic);
+    $('.grid').prepend(newPic);
+    $('.grid').imagesLoaded(onProgress).masonry('prepended', newPic);
   });
 }
 
