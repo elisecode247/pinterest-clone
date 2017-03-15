@@ -9,8 +9,14 @@ var createPic = function (event) {
     $('.pic-form__input').val('');
     picForm.toggleClass('form--hidden');
     var newPic = createPicElement(data);
-    $('.grid').prepend(newPic);
-    $('.grid').imagesLoaded(onProgress).masonry('prepended', newPic);
+    $('.grid').append(newPic);
+    $('.grid').imagesLoaded().progress(onProgress).fail(function () {
+      console.log('all images loaded, at least one is broken');
+    }).always(function(){
+      $('.grid').masonry('layout');
+    })
+     $('.grid').masonry('prepended',newPic, true);
+     
   });
 }
 
