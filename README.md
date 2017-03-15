@@ -19,8 +19,19 @@
 
 ### Possible Next Steps
 - Stream more pics at bottom of page.
+- Use WebPack, PostCSS, and ES6 with Babel
+- Include Mocha tests
 
 ## Resources Used
 
 - [Clementine](http://www.clementinejs.com)
 - [Node Authentication](https://scotch.io/tutorials/easy-node-authentication-setup-and-local)
+- [Front-End Tooling Trends for 2017](https://www.sitepoint.com/front-end-tooling-trends-2017/?utm_source=frontendfocus&utm_medium=email)
+- [oNline Web Fonts](http://www.onlinewebfonts.com/icon)
+
+## Tools Used
+- Visual Studio Code
+- SASS
+- BEM
+- Gulp
+- React

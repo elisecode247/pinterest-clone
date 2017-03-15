@@ -1,0 +1,16 @@
+footer {
+    margin: 0;
+    padding: 2em;
+    background-color: $color__grey--darker;
+    text-align: center;
+    color: $color__white;
+}
+
+.footer__a {
+    text-decoration: none;
+    color: $color__white;
+}
+
+.footer__a:hover {
+    color: $color__grey;
+}

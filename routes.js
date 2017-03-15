@@ -16,13 +16,17 @@ module.exports = function (app, passport) {
 		if (req.isAuthenticated()) {
 			return next();
 		} else {
-			res.redirect('/');
+			res.status(401).redirect('/');
 		}
 	}
 
     app.route('/')
         .get(function (req, res) {
-            res.render('index', {loggedIn: req.isAuthenticated()})
+            var user = null;
+            if (req.hasOwnProperty('user')){
+                user = req.user.twitter.username;
+            }
+            res.render('index', {loggedIn: req.isAuthenticated(), username: user})
         });
 
     app.route('/logout')
@@ -42,8 +46,7 @@ module.exports = function (app, passport) {
 
     app.route('/api/pics/:id/stars')
         .get(pictureHandler.getStars)
-        .post(isLoggedIn,pictureHandler.incrementStars)
-        .delete(isLoggedIn,pictureHandler.decrementStars);
+        .post(isLoggedIn,pictureHandler.setStars);
 
     app.route('/api/pics/:id')
         .get(pictureHandler.getPicture)
@@ -53,7 +56,7 @@ module.exports = function (app, passport) {
         .get(pictureHandler.getWall)
         .post(isLoggedIn,pictureHandler.createPicture)
 
-    app.route('/api/pics/owner/:userId')
+    app.route('/api/pics/owner/:username')
         .get(pictureHandler.getUserWall);
 
 };

@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+  include partials/head.pug
+  body
+    include partials/header.pug
+    block content
+    include partials/footer.pug
+    if loggedIn
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+      script(src='https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js')
+      script(src='../public/javascript/masonry.pkgd.min.js')
+      script(src='../public/javascript/pics.js')
+      script(src='../public/javascript/menu.js')
+      script(src='../public/javascript/form.js')
+    else
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+      script(src='https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js')
+      script(src='../public/javascript/masonry.pkgd.min.js')
+      script(src='../public/javascript/pics.js')
+    block scripts

@@ -19,6 +19,9 @@ function PictureHandler() {
         var ownerPhoto = req.user.twitter.photo;
         var url = req.body.url;
         var description = req.body.description;
+        if (/\S/.test(description) === false){
+            description = `pic posted by @${user}`;
+        }
         var newPicture = new Picture({
             'url': url,
             'description': description,
@@ -48,41 +51,31 @@ function PictureHandler() {
             .findById(id)
             .exec(function (err, result) {
                 if (err) throw err;
-                res.json(result.stars.length);
+                res.json(result);
             });
     };
 
-    this.incrementStars = function (req, res) {
+    this.setStars = function (req, res) {
         var id = req.params.id;
         var user = req.user.twitter.username;
         Picture
-            .findByIdAndUpdate(id, {
-                $push: {
-                    'stars': user
-                }
-            }, {
-                'stars': {
-                    $ne: user
-                }
+            .findById(id, null, {
+                'new': true
             })
             .exec(function (err, result) {
                 if (err) throw err;
-                res.json(result.stars.length);
-            });
-    };
-
-    this.decrementStars = function (req, res) {
-        var id = req.params.id;
-        var user = req.user.twitter.username;
-        Picture
-            .findByIdAndUpdate(id, {
-                $pull: {
-                    'stars': user
+                var index = result.stars.findIndex(function (element) {
+                    return element === user;
+                })
+                if (index > -1) {
+                    result.stars.splice(index, 1);
+                } else {
+                    result.stars.push(user);
                 }
-            }, {new: true})
-            .exec(function (err, result) {
-                if (err) throw err;
-                res.json(result.stars.length);
+                result.save(function () {
+                    res.json(result);
+                })
+
             });
     };
 
@@ -96,9 +89,11 @@ function PictureHandler() {
     };
 
     this.getUserWall = function (req, res) {
-        var user = req.params.userId;
+        var user = req.params.username;
         Picture
-            .find({'owner': user})
+            .find({
+                'owner': user
+            })
             .exec(function (err, result) {
                 if (err) throw err;
                 res.json(result);

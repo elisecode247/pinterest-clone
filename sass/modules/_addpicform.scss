@@ -1,0 +1,33 @@
+.pic-form {
+    padding: 1em;
+    display: block;
+    text-align: left;
+    background-color: $color__grey;
+    @media screen and (min-width: 540px){
+        position: absolute;
+        top: 4em;
+        left: 15.4em;
+        margin: 0 auto;
+        width: 8em;
+    }
+}
+
+.form--hidden {
+    display: none;
+}
+
+.pic-form__input {
+    width: 100%;
+    font-size: 1em;
+    margin: 0 0 0.5em 0;
+    border: 0;
+}
+
+.form__button {
+    width: 100%;
+    font-size: 1em;
+    background-color: $color__grey--darker;
+    border: 0;
+    color: white;
+    padding: 0.5em 0;
+}

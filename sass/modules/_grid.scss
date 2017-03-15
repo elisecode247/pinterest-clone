@@ -1,0 +1,13 @@
+.grid {
+  margin: 0 auto;
+}
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-item {
+  width: 300px;
+}

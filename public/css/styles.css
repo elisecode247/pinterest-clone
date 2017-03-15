@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-width: 200px;
+  font-size: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+h1 {
+  padding: 1em;
+  color: #000000; }
+
+h1, h2 {
+  margin: 0;
+  padding: 0; }
+
+main {
+  position: relative;
+  margin: auto;
+  padding: 1em;
+  background-color: #BAE1F2;
+  min-height: 50vh; }
+
+footer {
+  margin: 0;
+  padding: 2em;
+  background-color: #202b39;
+  text-align: center;
+  color: #FFFFFF; }
+
+.footer__a {
+  text-decoration: none;
+  color: #FFFFFF; }
+
+.footer__a:hover {
+  color: #8DAABA; }
+
+header {
+  background-color: #202b39;
+  width: 100%;
+  height: 4em;
+  position: relative;
+  z-index: 999; }
+
+.logo {
+  position: absolute;
+  top: 0.5em;
+  left: 1em; }
+
+.logo__img {
+  width: 60px; }
+
+.hamburger-menu {
+  padding: 5px;
+  position: absolute;
+  right: 1em;
+  top: 1.1em;
+  display: inherit;
+  width: 3em;
+  border: 1px solid #FFFFFF;
+  border-radius: 0.25em; }
+  @media screen and (min-width: 540px) {
+    .hamburger-menu {
+      display: none; } }
+
+.hamburger-menu:hover {
+  background-color: #8DAABA; }
+
+.hamburger-menu__bar {
+  margin: 5px;
+  background-color: #FFFFFF;
+  width: 80%;
+  height: 3px; }
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center; }
+
+.nav--logged-in {
+  margin: 4em auto auto auto;
+  position: absolute;
+  width: 100%;
+  justify-content: center;
+  flex-flow: column;
+  align-items: stretch;
+  text-align: center; }
+  @media screen and (min-width: 540px) {
+    .nav--logged-in {
+      position: static;
+      margin: 0 0 0 5em;
+      padding: 0;
+      height: 4em;
+      width: 15em;
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center; } }
+
+.nav--closed {
+  display: none; }
+
+.nav--opened {
+  display: flex; }
+
+.nav__a {
+  margin: 0;
+  padding: 0.5em;
+  background-color: #64C2EC;
+  color: #FFFFFF;
+  text-decoration: none; }
+  @media screen and (min-width: 540px) {
+    .nav__a {
+      border: 1px solid #64C2EC;
+      border-radius: 10px; } }
+
+.nav__a:hover {
+  background-color: #8DAABA; }
+
+@media screen and (min-width: 540px) {
+  .nav__a--logout {
+    position: absolute;
+    top: .92em;
+    right: 1em;
+    background-color: #FFFFFF;
+    border: 0;
+    color: #000000;
+    border: 1px solid #64C2EC;
+    border-radius: 10px; } }
+
+.nav__a--float-right {
+  position: absolute;
+  display: block;
+  top: .9em;
+  right: 1em;
+  background-color: #FFFFFF;
+  border: 0;
+  color: #000000;
+  border: 1px solid #64C2EC;
+  border-radius: 10px; }
+
+.grid {
+  margin: 0 auto; }
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.grid-item {
+  width: 300px; }
+
+.pic {
+  background-color: #bcd6e5;
+  box-shadow: 5px 5px 5px #8DAABA;
+  padding: 0.25em;
+  margin-bottom: 10px; }
+
+.pic__img {
+  width: 290px; }
+
+.pic__description {
+  margin: 0.5em auto;
+  padding: 0.5em;
+  max-width: 290px;
+  text-align: center;
+  background-color: #FFFFFF; }
+
+.pic__inner-container {
+  display: flex;
+  justify-content: space-between; }
+
+.pic__button {
+  background-color: #FFFFFF;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer; }
+
+.pic__button--profile {
+  background-size: contain; }
+
+.pic__button--delete {
+  color: #d10000; }
+
+.pic__button--stars {
+  color: #202b39;
+  width: 75px; }
+
+.pic-form {
+  padding: 1em;
+  display: block;
+  text-align: left;
+  background-color: #8DAABA; }
+  @media screen and (min-width: 540px) {
+    .pic-form {
+      position: absolute;
+      top: 4em;
+      left: 15.4em;
+      margin: 0 auto;
+      width: 8em; } }
+
+.form--hidden {
+  display: none; }
+
+.pic-form__input {
+  width: 100%;
+  font-size: 1em;
+  margin: 0 0 0.5em 0;
+  border: 0; }
+
+.form__button {
+  width: 100%;
+  font-size: 1em;
+  background-color: #202b39;
+  border: 0;
+  color: white;
+  padding: 0.5em 0; }

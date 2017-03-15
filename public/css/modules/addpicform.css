@@ -1,0 +1,9 @@
+.pic-form {
+  display: block;
+  text-align: left; }
+
+.form--hidden {
+  display: none; }
+
+.pic-form__input {
+  width: 99%; }

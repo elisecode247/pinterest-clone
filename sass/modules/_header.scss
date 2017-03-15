@@ -1,0 +1,119 @@
+header {
+    background-color: $color__grey--darker;
+    width: 100%;
+    height: 4em;
+    position: relative;
+    z-index: 999;
+}
+
+.logo {
+    position: absolute;
+    top: 0.5em;
+    left: 1em;
+}
+
+.logo__img {
+    width: 60px;
+}
+
+.hamburger-menu {
+    padding: 5px;
+    position: absolute;
+    right: 1em;
+    top: 1.1em;
+    display: inherit;
+    width: 3em;
+    border: 1px solid $color__white;
+    border-radius: $padding / 4;
+    @media screen and (min-width: 540px) {
+        display: none;
+    }
+}
+
+.hamburger-menu:hover {
+    background-color: $color__grey;
+}
+
+.hamburger-menu__bar {
+    margin: 5px;
+    background-color: $color__white;
+    width: 80%;
+    height: 3px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+}
+
+.nav--logged-in {
+    margin: 4em auto auto auto;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    flex-flow: column;
+    align-items: stretch;
+    text-align: center;
+    @media screen and (min-width: 540px) {
+        position: static;
+        margin: 0 0 0 5em;
+        padding: 0;
+        height: 4em;
+        width: 15em;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+}
+
+.nav--closed {
+    display: none;
+}
+
+.nav--opened {
+    display: flex;
+}
+
+.nav__a {
+    margin: 0;
+    padding: 0.5em;
+    background-color: $color__main;
+    color: $color__white;
+    text-decoration: none;
+    @media screen and (min-width: 540px) {
+        border: 1px solid $color__main;
+        border-radius: 10px;
+    }
+}
+
+.nav__a:hover {
+    background-color: $color__grey;
+}
+
+.nav__a--logout {
+    @media screen and (min-width: 540px) {
+        position: absolute;
+        top: .92em;
+        right: 1em;
+        background-color: $color__white;
+        border: 0;
+        color: $color__black;
+        border: 1px solid $color__main;
+        border-radius: 10px;
+    }
+}
+
+.nav__a--float-right {
+    position: absolute;
+    display: block;
+    top: .9em;
+    right: 1em;
+    background-color: $color__white;
+    border: 0;
+    color: $color__black;
+    border: 1px solid $color__main;
+    border-radius: 10px;
+}

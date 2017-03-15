@@ -1,0 +1,20 @@
+header
+  h1.sr-only Pinterest Clone
+  div.logo
+    a.logo__a(href='#')
+      img.logo__img(src='../public/images/logo.png', alt='Logo')
+  if loggedIn
+    div.hamburger-menu
+      div.hamburger-menu__bar
+      div.hamburger-menu__bar
+      div.hamburger-menu__bar
+    nav.nav--logged-in
+      a.nav__a.nav__a--all-pics(href='#') All&nbsp;Pics
+      a.nav__a.nav__a--my-pics(href='#') My&nbsp;Pics
+      a.nav__a.nav__a--addpic(href='#') Add&nbsp;Pic
+      include addpicform.pug
+      a.nav__a.nav__a--logout(href='/logout') Logout
+  else
+    nav.nav--logged-out
+      a.nav__a.nav__a--float-right(href='/auth/twitter')
+        img(src='../public/images/sign-in-with-twitter-link.png', alt='Twitter-Login')

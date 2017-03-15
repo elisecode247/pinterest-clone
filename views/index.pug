@@ -1,7 +1,9 @@
-html
-  h1 Testing with Pug
+extends layout.pug
+block content
   if loggedIn
-    h2 Logged 
+    div.sr-only#logged-in true
+    div.sr-only#username= username
   else
-    h2 Not Logged In
-    a(href="/auth/twitter") Twitter
+    div.sr-only#logged-in false
+  main
+    div.grid

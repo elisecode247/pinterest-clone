@@ -1,0 +1,47 @@
+.pic {
+    background-color: $color__grey--lighter;
+    box-shadow: 5px 5px 5px $color__grey;
+    padding: 0.25em;
+    margin-bottom: 10px;
+}
+
+.pic__img {
+    width: 290px;
+}
+
+.pic__description {
+    margin: 0.5em auto;
+    padding: 0.5em;
+    max-width: 290px;
+    text-align: center;
+    background-color: $color__white;
+}
+
+.pic__inner-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pic__button {
+    background-color: $color__white;
+    width: 50px;
+    height: 50px;
+    border: 0;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pic__button--profile {
+    // background-image: url('../images/Twitter_Logo_Blue.png');
+    background-size: contain;
+}
+
+.pic__button--delete {
+    color: $color__red;
+}
+
+.pic__button--stars {
+    color: $color__grey--darker;
+    width: 75px;
+}
