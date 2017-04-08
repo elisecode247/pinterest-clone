@@ -1,6 +1,6 @@
 ## Pinterest Clone
 
-### Demo: [pending](#)
+### Demo: [https://whispering-shelf-83897.herokuapp.com/](https://whispering-shelf-83897.herokuapp.com/)
 
 ### Project by [FreeCodeCamp](https://www.freecodecamp.com/challenges/build-a-pinterest-clone)
 
